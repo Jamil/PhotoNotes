@@ -34,8 +34,6 @@
 		77F23A5E182DD91B0013542D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F23A32182DD91B0013542D /* Foundation.framework */; };
 		77F23A5F182DD91B0013542D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F23A36182DD91B0013542D /* UIKit.framework */; };
 		77F23A60182DD91B0013542D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F23A38182DD91B0013542D /* CoreData.framework */; };
-		77F23A68182DD91B0013542D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77F23A66182DD91B0013542D /* InfoPlist.strings */; };
-		77F23A6A182DD91B0013542D /* CourseNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F23A69182DD91B0013542D /* CourseNotesTests.m */; };
 		77F23A79182DDE7E0013542D /* CourseInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F23A78182DDE7E0013542D /* CourseInputViewController.m */; };
 		77F23A7C182DDF360013542D /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F23A7B182DDF360013542D /* JVFloatLabeledTextField.m */; };
 /* End PBXBuildFile section */
@@ -61,7 +59,7 @@
 		77A6F0B5182E8BCF00E19385 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		77A6F0B7182E96D100E19385 /* DropboxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxController.h; sourceTree = "<group>"; };
 		77A6F0B8182E96D100E19385 /* DropboxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxController.m; sourceTree = "<group>"; };
-		77A6F0BA182EA04900E19385 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		77A6F0BA182EA04900E19385 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = PhotoNotes/Dropbox.framework; sourceTree = "<group>"; };
 		77A6F0BF182EA4F400E19385 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		77A6F0C1182EA50000E19385 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		77A6F0C3182EA50500E19385 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -88,9 +86,6 @@
 		77F23A55182DD91B0013542D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77F23A5B182DD91B0013542D /* PhotoNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F23A5C182DD91B0013542D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		77F23A65182DD91B0013542D /* PhotoNotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoNotesTests-Info.plist"; sourceTree = "<group>"; };
-		77F23A67182DD91B0013542D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		77F23A69182DD91B0013542D /* CourseNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseNotesTests.m; sourceTree = "<group>"; };
 		77F23A77182DDE7E0013542D /* CourseInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInputViewController.h; sourceTree = "<group>"; };
 		77F23A78182DDE7E0013542D /* CourseInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInputViewController.m; sourceTree = "<group>"; };
 		77F23A7A182DDF360013542D /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
@@ -131,8 +126,7 @@
 		77F23A26182DD91B0013542D = {
 			isa = PBXGroup;
 			children = (
-				77F23A3A182DD91B0013542D /* CourseNotes */,
-				77F23A63182DD91B0013542D /* CourseNotesTests */,
+				77F23A3A182DD91B0013542D /* PhotoNotes */,
 				77F23A31182DD91B0013542D /* Frameworks */,
 				77F23A30182DD91B0013542D /* Products */,
 			);
@@ -164,7 +158,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		77F23A3A182DD91B0013542D /* CourseNotes */ = {
+		77F23A3A182DD91B0013542D /* PhotoNotes */ = {
 			isa = PBXGroup;
 			children = (
 				77F23A7D182DDF470013542D /* External Classes */,
@@ -175,7 +169,7 @@
 				77F23A55182DD91B0013542D /* Images.xcassets */,
 				77F23A3B182DD91B0013542D /* Supporting Files */,
 			);
-			path = CourseNotes;
+			path = PhotoNotes;
 			sourceTree = "<group>";
 		};
 		77F23A3B182DD91B0013542D /* Supporting Files */ = {
@@ -185,24 +179,6 @@
 				77F23A3D182DD91B0013542D /* InfoPlist.strings */,
 				77F23A40182DD91B0013542D /* main.m */,
 				77F23A42182DD91B0013542D /* PhotoNotes-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		77F23A63182DD91B0013542D /* CourseNotesTests */ = {
-			isa = PBXGroup;
-			children = (
-				77F23A69182DD91B0013542D /* CourseNotesTests.m */,
-				77F23A64182DD91B0013542D /* Supporting Files */,
-			);
-			path = CourseNotesTests;
-			sourceTree = "<group>";
-		};
-		77F23A64182DD91B0013542D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				77F23A65182DD91B0013542D /* PhotoNotesTests-Info.plist */,
-				77F23A66182DD91B0013542D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -356,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F23A68182DD91B0013542D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +361,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F23A6A182DD91B0013542D /* CourseNotesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,14 +397,6 @@
 				77F23A4A182DD91B0013542D /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		77F23A66182DD91B0013542D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77F23A67182DD91B0013542D /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -519,12 +485,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jamildhanani/Developer/iOS/Projects/CourseNotes,
+					/Users/jamildhanani/Developer/iOS/Projects/PhotoNotes,
 					"/Users/jamildhanani/Downloads/dropbox-ios-sdk-1.3.9",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CourseNotes/PhotoNotes-Prefix.pch";
-				INFOPLIST_FILE = "CourseNotes/PhotoNotes-Info.plist";
+				GCC_PREFIX_HEADER = "PhotoNotes/PhotoNotes-Prefix.pch";
+				INFOPLIST_FILE = "PhotoNotes/PhotoNotes-Info.plist";
 				PRODUCT_NAME = PhotoNotes;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -540,12 +506,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jamildhanani/Developer/iOS/Projects/CourseNotes,
+					/Users/jamildhanani/Developer/iOS/Projects/PhotoNotes,
 					"/Users/jamildhanani/Downloads/dropbox-ios-sdk-1.3.9",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CourseNotes/PhotoNotes-Prefix.pch";
-				INFOPLIST_FILE = "CourseNotes/PhotoNotes-Info.plist";
+				GCC_PREFIX_HEADER = "PhotoNotes/PhotoNotes-Prefix.pch";
+				INFOPLIST_FILE = "PhotoNotes/PhotoNotes-Info.plist";
 				PRODUCT_NAME = PhotoNotes;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

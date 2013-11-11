@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>92415FC9-6C5A-4F7E-92E8-2D2D4F8D868B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PhotoNotes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3D30440E-806E-4CE5-BD12-E07009163B1A</key>
+		<string>https://github.com/Jamil/PhotoNotes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhotoNotes.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3D30440E-806E-4CE5-BD12-E07009163B1A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Jamil/PhotoNotes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3D30440E-806E-4CE5-BD12-E07009163B1A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3D30440E-806E-4CE5-BD12-E07009163B1A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhotoNotes</string>
+		</dict>
+	</array>
+</dict>
+</plist>
