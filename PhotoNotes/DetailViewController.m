@@ -136,7 +136,7 @@
     
     // Save the context.
     NSError *error = nil;
-    if (![context save:&error]) {lthough it may be useful during development.
+    if (![context save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }

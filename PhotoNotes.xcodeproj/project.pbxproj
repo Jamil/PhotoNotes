@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77111CF918316DE000659F32 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6F0BA182EA04900E19385 /* Dropbox.framework */; };
 		77A6F09D182E164100E19385 /* NoteInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6F09C182E164100E19385 /* NoteInputViewController.m */; };
 		77A6F0A0182E496600E19385 /* ImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6F09F182E496600E19385 /* ImageViewerViewController.m */; };
 		77A6F0B3182E8BCF00E19385 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6F0B2182E8BCF00E19385 /* Note.m */; };
 		77A6F0B6182E8BCF00E19385 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6F0B5182E8BCF00E19385 /* Course.m */; };
 		77A6F0B9182E96D100E19385 /* DropboxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6F0B8182E96D100E19385 /* DropboxController.m */; };
-		77A6F0BB182EA04900E19385 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6F0BA182EA04900E19385 /* Dropbox.framework */; };
 		77A6F0C0182EA4F400E19385 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6F0BF182EA4F400E19385 /* CFNetwork.framework */; };
 		77A6F0C2182EA50000E19385 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6F0C1182EA50000E19385 /* SystemConfiguration.framework */; };
 		77A6F0C4182EA50600E19385 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6F0C3182EA50500E19385 /* QuartzCore.framework */; };
@@ -97,13 +97,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77111CF918316DE000659F32 /* Dropbox.framework in Frameworks */,
 				77A6F0C6182EA51000E19385 /* libc++.dylib in Frameworks */,
 				77A6F0C4182EA50600E19385 /* QuartzCore.framework in Frameworks */,
 				77A6F0C2182EA50000E19385 /* SystemConfiguration.framework in Frameworks */,
 				77A6F0C0182EA4F400E19385 /* CFNetwork.framework in Frameworks */,
 				77F23A35182DD91B0013542D /* CoreGraphics.framework in Frameworks */,
 				77F23A39182DD91B0013542D /* CoreData.framework in Frameworks */,
-				77A6F0BB182EA04900E19385 /* Dropbox.framework in Frameworks */,
 				77F23A37182DD91B0013542D /* UIKit.framework in Frameworks */,
 				77F23A33182DD91B0013542D /* Foundation.framework in Frameworks */,
 			);
@@ -487,6 +487,7 @@
 					"$(inherited)",
 					/Users/jamildhanani/Developer/iOS/Projects/PhotoNotes,
 					"/Users/jamildhanani/Downloads/dropbox-ios-sdk-1.3.9",
+					/Users/jamildhanani/Developer/iOS/Projects/PhotoNotes/PhotoNotes,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoNotes/PhotoNotes-Prefix.pch";
@@ -508,6 +509,7 @@
 					"$(inherited)",
 					/Users/jamildhanani/Developer/iOS/Projects/PhotoNotes,
 					"/Users/jamildhanani/Downloads/dropbox-ios-sdk-1.3.9",
+					/Users/jamildhanani/Developer/iOS/Projects/PhotoNotes/PhotoNotes,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoNotes/PhotoNotes-Prefix.pch";

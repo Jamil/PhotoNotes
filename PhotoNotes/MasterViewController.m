@@ -6,10 +6,12 @@
 //  Copyright (c) 2013 Jamil Dhanani. All rights reserved.
 //
 
+#import <Dropbox/Dropbox.h>
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import <Dropbox/Dropbox.h>
 #import "DropboxController.h"
+
+#import "config.h"
 
 #define TB_CELL_BG_ALPHA 0.2f
 
