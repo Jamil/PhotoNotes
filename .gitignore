@@ -1,4 +1,5 @@
 tessdata/*
-include/*
-lib/*
 CourseNotes/config.h
+
+PhotoNotes/include/*
+PhotoNotes/lib/*
