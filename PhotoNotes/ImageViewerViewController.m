@@ -42,6 +42,11 @@
     return self.imageView;
 }
 
+-(IBAction)shareItem:(id)sender {
+    UIActivityViewController *shareControl = [[UIActivityViewController alloc] initWithActivityItems:@[self.imageView.image] applicationActivities:nil];
+    [self presentViewController:shareControl animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

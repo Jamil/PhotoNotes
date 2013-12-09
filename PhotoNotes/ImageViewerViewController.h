@@ -13,4 +13,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) id detailItem;
+
+-(IBAction)shareItem:(id)sender;
+
 @end
