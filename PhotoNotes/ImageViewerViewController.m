@@ -7,6 +7,7 @@
 //
 
 #import "ImageViewerViewController.h"
+#import "OCRTextViewController.h"
 
 @interface ImageViewerViewController ()
 
@@ -45,6 +46,13 @@
 -(IBAction)shareItem:(id)sender {
     UIActivityViewController *shareControl = [[UIActivityViewController alloc] initWithActivityItems:@[self.imageView.image] applicationActivities:nil];
     [self presentViewController:shareControl animated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"OCRSegue"]) {
+        OCRTextViewController *controller = [segue destinationViewController];
+        controller.image = self.imageView.image;
+    }
 }
 
 - (void)didReceiveMemoryWarning
