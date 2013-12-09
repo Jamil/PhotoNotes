@@ -34,9 +34,24 @@
     UIImage *image = [UIImage imageWithData:data];
     self.imageView.image = image;
     [self.scrollView setDelegate:self];
-    self.scrollView.maximumZoomScale = 7.0f;
+    self.scrollView.maximumZoomScale = 4.0f;
+    [self.imageView sizeToFit];
+	[self.scrollView setContentSize:self.imageView.image.size];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-	[self.scrollView setContentSize:CGSizeMake(image.size.width, image.size.height)];
+    // 4
+    CGRect scrollViewFrame = self.scrollView.frame;
+    CGFloat scaleWidth = scrollViewFrame.size.width / self.scrollView.contentSize.width;
+    CGFloat scaleHeight = scrollViewFrame.size.height / self.scrollView.contentSize.height;
+    CGFloat minScale = MIN(scaleWidth, scaleHeight);
+    self.scrollView.minimumZoomScale = minScale;
+    
+    // 5
+    self.scrollView.maximumZoomScale = 1.0f;
+    self.scrollView.zoomScale = MAX(scaleWidth, scaleHeight);
 }
 
 - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {

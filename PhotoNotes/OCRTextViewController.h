@@ -13,4 +13,5 @@
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) IBOutlet UITextView *convertedText;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *av;
+@property (nonatomic, retain) IBOutlet UILabel *workingLabel;
 @end

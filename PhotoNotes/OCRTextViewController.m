@@ -42,6 +42,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [tesseract recognize];
         dispatch_async(dispatch_get_main_queue(), ^{
+            self.workingLabel.hidden = TRUE;
             self.convertedText.text = [tesseract recognizedText];
             [tesseract clear];
             [self.av stopAnimating];
