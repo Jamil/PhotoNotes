@@ -1,2 +1,4 @@
-
+tessdata/*
+include/*
+lib/*
 CourseNotes/config.h
