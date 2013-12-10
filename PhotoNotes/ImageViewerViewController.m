@@ -42,14 +42,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    // 4
+    self.navigationController.toolbarHidden = YES;
+    
     CGRect scrollViewFrame = self.scrollView.frame;
     CGFloat scaleWidth = scrollViewFrame.size.width / self.scrollView.contentSize.width;
     CGFloat scaleHeight = scrollViewFrame.size.height / self.scrollView.contentSize.height;
     CGFloat minScale = MIN(scaleWidth, scaleHeight);
     self.scrollView.minimumZoomScale = minScale;
     
-    // 5
     self.scrollView.maximumZoomScale = 1.0f;
     self.scrollView.zoomScale = MAX(scaleWidth, scaleHeight);
 }

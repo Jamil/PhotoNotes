@@ -41,6 +41,10 @@
     self.topicInput.font = [UIFont fontWithName:@"AvenirNext-Regular" size:40];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.toolbarHidden = YES;
+}
+
 -(void)donePressed:(id)sender {
     [self.delegate didReceiveData:self.topicInput.text withDate:self.datePicker.date andImage:self.image];
     [self dismissViewControllerAnimated:YES completion:nil];

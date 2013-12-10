@@ -24,12 +24,15 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
         CGRect viewBounds = [self.view bounds];
         viewBounds.origin.y = 18;
         viewBounds.size.height = viewBounds.size.height - 18;
     }
-    [super viewWillAppear:animated];
+    
+    self.navigationController.toolbarHidden = YES;
 }
 
 - (void)viewDidLoad
