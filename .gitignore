@@ -7,4 +7,4 @@ PhotoNotes/lib/*
 *.xcuserstate
 
 *.xcuserstate
-config.h
+PhotoNotes/config.h

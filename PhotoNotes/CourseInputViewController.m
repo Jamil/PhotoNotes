@@ -32,13 +32,13 @@
         viewBounds.size.height = viewBounds.size.height - 18;
     }
     
+    self.navigationController.view.tintColor = self.presentingViewController.navigationController.view.tintColor;
     self.navigationController.toolbarHidden = YES;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.view.tintColor = self.presentingViewController.navigationController.view.tintColor;
     [self.courseNameLabel becomeFirstResponder];
     
     self.courseNameLabel.placeholder = @"Course Name";

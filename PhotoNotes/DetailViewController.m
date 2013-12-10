@@ -34,7 +34,6 @@
 
 - (void)configureView
 {
-    
     NSData *colorData = [self.detailItem valueForKey:@"color"];
     UIColor *rawColor = (UIColor *)[NSKeyedUnarchiver unarchiveObjectWithData:colorData];
     CGColorRef color = [rawColor CGColor];
@@ -55,14 +54,8 @@
     [cameraButton setAction:@selector(takePhoto:)];
     [cameraButton setTarget:self];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
     self.navigationItem.rightBarButtonItem = cameraButton;
-    
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"name"] description];
-    }
+    self.navigationController.toolbarHidden = YES;
 }
 
 -(void)takePhoto:(id)sender {
@@ -71,12 +64,16 @@
 
 - (void)viewDidLoad
 {
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    if (self.detailItem) {
+        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"name"] description];
+    }
     [super viewDidLoad];
-    [self configureView];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    self.navigationController.toolbarHidden = YES;
+    [self configureView];
 }
 
 - (void)didReceiveMemoryWarning
