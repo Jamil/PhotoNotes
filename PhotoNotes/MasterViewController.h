@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CourseInputViewController.h"
+#import <CoreData/CoreData.h>
 
 @class DetailViewController;
-
-#import <CoreData/CoreData.h>
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, CourseInputViewControllerDelegate, UIAlertViewDelegate>
 

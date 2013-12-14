@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77077554185AAD7A004A7976 /* DropboxSigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77077553185AAD7A004A7976 /* DropboxSigninViewController.m */; };
 		77111CF918316DE000659F32 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6F0BA182EA04900E19385 /* Dropbox.framework */; };
 		77A2F13F1856405D00BF83A9 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2F13C1856405D00BF83A9 /* liblept.a */; };
 		77A2F1401856405D00BF83A9 /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A2F13D1856405D00BF83A9 /* libtesseract_all.a */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77077552185AAD7A004A7976 /* DropboxSigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxSigninViewController.h; sourceTree = "<group>"; };
+		77077553185AAD7A004A7976 /* DropboxSigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSigninViewController.m; sourceTree = "<group>"; };
 		77A2F0AB1856405C00BF83A9 /* allheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allheaders.h; sourceTree = "<group>"; };
 		77A2F0AC1856405C00BF83A9 /* alltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = alltypes.h; sourceTree = "<group>"; };
 		77A2F0AD1856405C00BF83A9 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
@@ -546,6 +549,8 @@
 				77F23A78182DDE7E0013542D /* CourseInputViewController.m */,
 				77F23A52182DD91B0013542D /* DetailViewController.h */,
 				77F23A53182DD91B0013542D /* DetailViewController.m */,
+				77077552185AAD7A004A7976 /* DropboxSigninViewController.h */,
+				77077553185AAD7A004A7976 /* DropboxSigninViewController.m */,
 				77A6F09B182E164100E19385 /* NoteInputViewController.h */,
 				77A6F09C182E164100E19385 /* NoteInputViewController.m */,
 				77A6F09E182E496600E19385 /* ImageViewerViewController.h */,
@@ -690,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77077554185AAD7A004A7976 /* DropboxSigninViewController.m in Sources */,
 				77A6F0B6182E8BCF00E19385 /* Course.m in Sources */,
 				77A6F0B3182E8BCF00E19385 /* Note.m in Sources */,
 				77A2F1481856414800BF83A9 /* OCRTextViewController.m in Sources */,

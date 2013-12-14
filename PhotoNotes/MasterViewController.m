@@ -32,7 +32,6 @@
 
 - (void)viewDidLoad
 {
-    
     DBAccountManager* accountMgr =
     [[DBAccountManager alloc] initWithAppKey:KEY secret:SECRET];
     [DBAccountManager setSharedManager:accountMgr];
