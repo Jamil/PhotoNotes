@@ -9,11 +9,24 @@
 #import <UIKit/UIKit.h>
 #import <Dropbox/Dropbox.h>
 
-@interface DropboxSigninViewController : UIViewController
+typedef enum LinkedState {
+    LSLinked, LSUnlinked
+} LinkedState;
 
-@property (nonatomic, retain) IBOutlet UITextView *descView;
+@interface DropboxSigninViewController : UIViewController {
+    bool _currentState;
+    DBAccount *_account;
+}
+
+@property (nonatomic, retain) IBOutlet UILabel *nameLabel;
+@property (nonatomic, retain) IBOutlet UILabel *emailLabel;
+@property (nonatomic, retain) IBOutlet UILabel *linkedLabel;
+@property (nonatomic, retain) IBOutlet UIButton *signOutButton;
+@property (nonatomic, retain) IBOutlet UIButton *signinButton;
+@property (nonatomic, retain) IBOutlet UIButton *cancelButton;
 
 -(IBAction)signIn:(id)sender;
 -(IBAction)signOut:(id)sender;
+-(IBAction)cancelPress:(id)sender;
 
 @end

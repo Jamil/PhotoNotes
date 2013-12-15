@@ -69,7 +69,7 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eEO-8f-idn"/>
-                        <barButtonItem title="Connect to Dropbox" id="cXC-mw-YSW">
+                        <barButtonItem title="Dropbox Settings" id="cXC-mw-YSW">
                             <connections>
                                 <action selector="toggleDropboxAction" destination="pGg-6v-bdr" id="kiC-2F-u5j"/>
                                 <segue destination="VbO-C2-1Hl" kind="modal" identifier="DropboxAccount" id="xVo-uF-Zwl"/>
@@ -364,40 +364,60 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linked Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8iy-pe-OaE">
-                                <rect key="frame" x="85" y="168" width="151" height="24"/>
+                                <rect key="frame" x="37" y="94" width="247" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="janedoe@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cl1-o1-jvZ">
-                                <rect key="frame" x="84" y="223" width="152" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="26"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane Doe, Apple Inc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1c3-Yo-y3x">
-                                <rect key="frame" x="84" y="200" width="153" height="22"/>
+                                <rect key="frame" x="42" y="174" width="236" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rIK-1a-9lt">
-                                <rect key="frame" x="96" y="253" width="60" height="30"/>
+                                <rect key="frame" x="90" y="253" width="141" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Sign Out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signOut:" destination="VbO-C2-1Hl" eventType="touchUpInside" id="PgS-aK-W4E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6AB-Je-G5y">
-                                <rect key="frame" x="176" y="253" width="48" height="30"/>
+                                <rect key="frame" x="120" y="498" width="81" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelPress:" destination="VbO-C2-1Hl" eventType="touchUpInside" id="uLa-wh-Kea"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OCJ-oG-FxM">
+                                <rect key="frame" x="20" y="183" width="280" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Connect to Dropbox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="VbO-C2-1Hl" eventType="touchUpInside" id="tTH-IZ-FcI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="6AB-Je-G5y" id="YRC-wE-23Y"/>
+                        <outlet property="linkedLabel" destination="8iy-pe-OaE" id="WPd-dY-sch"/>
+                        <outlet property="nameLabel" destination="1c3-Yo-y3x" id="d9T-vo-HJu"/>
+                        <outlet property="signOutButton" destination="rIK-1a-9lt" id="lXR-HB-N8C"/>
+                        <outlet property="signinButton" destination="OCJ-oG-FxM" id="4Gq-o2-QF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toh-pg-rcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
