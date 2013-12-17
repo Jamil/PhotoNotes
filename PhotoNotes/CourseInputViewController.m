@@ -49,7 +49,7 @@
     self.courseCodeLabel.floatingLabelYPadding = @5;
     self.courseNameLabel.floatingLabelYPadding = @5;
     self.courseCodeLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:40];
-    self.courseNameLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:40];
+    self.courseNameLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:25];
 }
 
 -(IBAction)doneButtonTapped {

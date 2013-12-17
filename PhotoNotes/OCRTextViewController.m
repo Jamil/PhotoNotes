@@ -7,7 +7,6 @@
 //
 
 #import "OCRTextViewController.h"
-#import "Tesseract.h"
 
 @interface OCRTextViewController ()
 
@@ -29,28 +28,46 @@
     [super viewDidLoad];
 	
     // Intialize Tesseract (actually that sounds extremely cool) and set IVs
-    Tesseract *tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+    self.tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     
     if (!self.image) {
         NSLog(@"Warning: No Image in OCR VC");
         return;
     }
     
-    [tesseract setImage:self.image];
+    [self.tesseract setImage:self.image];
     
     [self.av startAnimating];
+    // Timeout after 20 seconds
+    NSTimer *timeoutTimer = [NSTimer scheduledTimerWithTimeInterval:20.0
+                                                             target:self
+                                                           selector:@selector(ocrTimeout)
+                                                           userInfo:nil
+                                                            repeats:NO];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [tesseract recognize];
+        [self.tesseract recognize];
         dispatch_async(dispatch_get_main_queue(), ^{
+            [timeoutTimer invalidate];
             self.workingLabel.hidden = TRUE;
-            self.convertedText.text = [tesseract recognizedText];
-            [tesseract clear];
+            self.convertedText.text = [self.tesseract recognizedText];
+            [self.tesseract clear];
             [self.av stopAnimating];
         });
     });
 }
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)ocrTimeout {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error: Timeout" message:@"The text conversion process took a little too long and we had to stop it - this is usually an indication that the text was unreadable and couldn't be processed." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+    [alert show];
+    [self.av stopAnimating];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     self.navigationController.toolbarHidden = YES;
 }
 

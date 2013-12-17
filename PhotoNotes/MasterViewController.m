@@ -67,7 +67,7 @@
     [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"asked-connect"];
 }
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     self.navigationController.view.tintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
     self.navigationController.toolbarHidden = NO;
     
@@ -90,7 +90,7 @@
     [self presentViewController:navigationController animated:YES completion:nil];
 }
 
--(void)didReceiveInput:(NSString*)courseName code:(NSString*)courseCode {
+- (void)didReceiveInput:(NSString*)courseName code:(NSString*)courseCode {
     NSArray *colors = @[[UIColor colorWithRed:0.27f green:0.85f blue:0.46f alpha:TB_CELL_BG_ALPHA], [UIColor colorWithRed:0.18f green:0.67f blue:0.84f alpha:TB_CELL_BG_ALPHA], [UIColor colorWithRed:1.0f green:0.79f blue:0.28f alpha:TB_CELL_BG_ALPHA], [UIColor colorWithRed:1.0f green:0.17f blue:0.34f alpha:TB_CELL_BG_ALPHA], [UIColor colorWithRed:1.0f green:0.22f blue:0.22f alpha:TB_CELL_BG_ALPHA], [UIColor colorWithRed:1.0f green:0.58f blue:0.21f alpha:TB_CELL_BG_ALPHA], [UIColor colorWithRed:0.35f green:0.35f blue:0.81f alpha:TB_CELL_BG_ALPHA]];
     UIColor *shadeColor = colors[rand() % colors.count];
     NSData *colorData = [NSKeyedArchiver archivedDataWithRootObject:shadeColor];
@@ -185,7 +185,6 @@
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     

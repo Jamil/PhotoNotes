@@ -58,7 +58,8 @@
         // Set up sign out, label buttons
         self.signOutButton.hidden = YES;
         self.signinButton.hidden = NO;
-        self.nameLabel.hidden = YES;    }
+        self.nameLabel.hidden = YES;
+    }
 }
 
 -(void)cancelPress:(id)sender {

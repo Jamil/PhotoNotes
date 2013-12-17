@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tesseract.h"
 
-@interface OCRTextViewController : UIViewController
+@interface OCRTextViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) IBOutlet UITextView *convertedText;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *av;
 @property (nonatomic, retain) IBOutlet UILabel *workingLabel;
+@property (strong, nonatomic) Tesseract *tesseract;
+
 @end
