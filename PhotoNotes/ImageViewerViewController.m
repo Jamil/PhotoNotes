@@ -34,15 +34,15 @@
     UIImage *image = [UIImage imageWithData:data];
     self.imageView.image = image;
     [self.scrollView setDelegate:self];
-    self.scrollView.maximumZoomScale = 4.0f;
-    [self.imageView sizeToFit];
-	[self.scrollView setContentSize:self.imageView.image.size];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     self.navigationController.toolbarHidden = YES;
+    
+    [self.imageView sizeToFit];
+	[self.scrollView setContentSize:self.imageView.image.size];
     
     CGRect scrollViewFrame = self.scrollView.frame;
     CGFloat scaleWidth = scrollViewFrame.size.width / self.scrollView.contentSize.width;
