@@ -104,7 +104,6 @@
             
             NSArray *imagesInFolder = [dict valueForKey:courseNames[i]];
             for (int j = 0; j < imagesInFolder.count; j++) {
-                NSLog(@"TEST");
                 NSString* filename = [[imagesInFolder objectAtIndex:j] lastPathComponent];
                 DBPath *toInsertFile = [[DBPath root] childPath:[NSString stringWithFormat:@"%@/%@", courseNames[i], filename]];
                 DBFile *file = [filesystem createFile:toInsertFile error:nil];

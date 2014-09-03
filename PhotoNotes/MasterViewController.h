@@ -17,7 +17,6 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *dropboxSettingsLabel;
+ @property (nonatomic, retain) IBOutlet UIBarButtonItem *dropboxSettingsLabel;
 
 @end
